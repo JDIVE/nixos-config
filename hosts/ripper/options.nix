@@ -34,7 +34,7 @@ in {
 
   # System Settings
   clock24h = true;
-  theLocale = "en_US.UTF-8";
+  theLocale = "en_GB.UTF-8";
   theKBDLayout = "us";
   theSecondKBDLayout = "de";
   theKBDVariant = "";
@@ -67,7 +67,7 @@ in {
   # Program Options
   browser = "firefox"; # Install & Set Default Browser
   terminal = "kitty";  # Set Default System Terminal
-  distrobox = false;
+  distrobox = true;
   flatpak = false;
   kdenlive = false;
   blender = false;
@@ -75,17 +75,17 @@ in {
 
   # Enable Support For
   # Logitech Devices
-  logitech = true;
+  logitech = false;
 
   # Enable Terminals ( If You Disable All You Get Kitty )
   wezterm = false;
-  alacritty = true;
+  alacritty = false;
   kitty = true;
 
   # Enable Python & PyCharm
   python = true;
   
   # Enable SyncThing
-  syncthing = true;
+  syncthing = false;
 
 }
