@@ -11,4 +11,11 @@
   # This is for OBS Virtual Cam Support - v4l2loopback setup
   boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+
+  # This is to enable ZFS
+
+  boot.supportedFilesystems = [ "zfs" ];
+  boot.zfs.forceImportRoot = false;
+  networking.hostId = "cf388e4b";
+
 }
