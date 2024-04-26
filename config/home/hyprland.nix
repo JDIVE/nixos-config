@@ -142,7 +142,7 @@ in with lib; {
       bind = ${modifier},O,exec,obs
       bind = ${modifier},G,exec,gimp
       bind = ${modifier}SHIFT,G,exec,godot4
-      bind = ${modifier},T,exec,thunar
+      bind = ${modifier},N,exec,thunar
       bind = ${modifier},M,exec,spotify
       bind = ${modifier},Q,killactive,
       bind = ${modifier},P,pseudo,
