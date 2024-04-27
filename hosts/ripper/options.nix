@@ -35,7 +35,7 @@ in {
   # System Settings
   clock24h = true;
   theLocale = "en_GB.UTF-8";
-  theKBDLayout = "us";
+  theKBDLayout = "gb";
   theSecondKBDLayout = "de";
   theKBDVariant = "";
   theLCVariables = "en_US.UTF-8";
