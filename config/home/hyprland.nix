@@ -27,6 +27,10 @@ in with lib; {
       monitor=DP-2,3840x2160,1080x306,1.666667
       monitor=DP-4,1920x1080,3382x0,1
       monitor=DP-1,1920x1080,3382x1080,1
+      workspace=1,monitor:DP-3
+      workspace=2,monitor:DP-2
+      workspace=3,monitor:DP-4
+      workspace=4,monitor:DP-1
       general {
         gaps_in = 6
         gaps_out = 8
@@ -39,7 +43,7 @@ in with lib; {
 
       input {
         kb_layout = ${theKBDLayout}, ${theSecondKBDLayout}
-	kb_options = grp:alt_shift_toggle
+	      kb_options = grp:alt_shift_toggle
         kb_options=caps:super
         follow_mouse = 1
         touchpad {
