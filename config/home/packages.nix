@@ -7,7 +7,7 @@ in {
   # Install Packages For The User
   home.packages = with pkgs; [
     pkgs."${browser}" discord libvirt swww grim slurp gnome.file-roller
-    swaynotificationcenter rofi-wayland imv transmission-gtk mpv
+    looking-glass-client swaynotificationcenter rofi-wayland imv transmission-gtk mpv
     gimp obs-studio rustup audacity pavucontrol tree protonup-qt
     font-awesome spotify swayidle neovide swaylock obsidian
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
