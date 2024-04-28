@@ -25,6 +25,7 @@
     ./services.nix
     ./steam.nix
     ./syncthing.nix
+    ./vfio.nix
     ./vm.nix
     
   ];
