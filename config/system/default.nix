@@ -15,6 +15,7 @@
     ./intel-nvidia.nix
     ./kernel.nix
     ./logitech.nix
+    ./looking-glass.nix
     ./nfs.nix
     ./ntp.nix
     ./nvidia.nix
