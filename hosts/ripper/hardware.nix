@@ -30,10 +30,28 @@
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp36s0f0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp36s0f1.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp38s0.useDHCP = lib.mkDefault true;
+  networking.useDHCP = false;
+  networking.interfaces.enp36s0f0.useDHCP = false;
+  networking.interfaces.enp36s0f1.useDHCP = false;
+  networking.interfaces.wlp38s0.useDHCP = false;
+  networking.bridges = {
+    "br0" = {
+      interfaces = [ "enp36s0f0" ];
+    };
+    "br1" = {
+      interfaces = [ "enp36s0f1" ];
+    };
+  };
+  networking.interfaces.br0.ipv4.addresses = [ {
+    address = "10.1.10.50";
+    prefixLength = 24;
+  } ];
+  networking.interfaces.br1.ipv4.addresses = [ {
+    address = "10.1.10.51";
+    prefixLength = 24;
+  } ];
+  networking.defaultGateway = "10.1.10.1";
+  networking.nameservers = ["10.1.10.1"];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
