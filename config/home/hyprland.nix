@@ -27,10 +27,18 @@ in with lib; {
       monitor=DP-2,3840x2160,1080x306,1.666667
       monitor=DP-4,1920x1080,3382x0,1
       monitor=DP-1,1920x1080,3382x1080,1
-      workspace=1,monitor:DP-3
-      workspace=2,monitor:DP-2
-      workspace=3,monitor:DP-4
-      workspace=4,monitor:DP-1
+      workspace=1,monitor:DP-3,persistent:true,default:true
+      workspace=2,monitor:DP-3,persistent:true
+      workspace=3,monitor:DP-3,persistent:true
+      workspace=4,monitor:DP-2,persistent:true,default:true
+      workspace=5,monitor:DP-2,persistent:true
+      workspace=6,monitor:DP-2,persistent:true
+      workspace=7,monitor:DP-4,persistent:true,default:true
+      workspace=8,monitor:DP-4,persistent:true
+      workspace=9,monitor:DP-4,persistent:true
+      workspace=10,monitor:DP-1,persistent:true,default:true
+      workspace=11,monitor:DP-1,persistent:true
+      workspace=12,monitor:DP-1,persistent:true
       general {
         gaps_in = 6
         gaps_out = 8
@@ -180,6 +188,8 @@ in with lib; {
       bind = ${modifier},8,workspace,8
       bind = ${modifier},9,workspace,9
       bind = ${modifier},0,workspace,10
+      bind = ${modifier},minus,workspace,11
+      bind = ${modifier},equal,workspace,12
       bind = ${modifier}SHIFT,SPACE,movetoworkspace,special
       bind = ${modifier},SPACE,togglespecialworkspace
       bind = ${modifier}SHIFT,1,movetoworkspace,1
@@ -192,6 +202,8 @@ in with lib; {
       bind = ${modifier}SHIFT,8,movetoworkspace,8
       bind = ${modifier}SHIFT,9,movetoworkspace,9
       bind = ${modifier}SHIFT,0,movetoworkspace,10
+      bind = ${modifier}SHIFT,minus,movetoworkspace,11
+      bind = ${modifier}SHIFT,equal,movetoworkspace,12
       bind = ${modifier}CONTROL,right,workspace,e+1
       bind = ${modifier}CONTROL,left,workspace,e-1
       bind = ${modifier},mouse_down,workspace, e+1
