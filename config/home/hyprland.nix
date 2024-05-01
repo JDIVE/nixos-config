@@ -132,6 +132,14 @@ in with lib; {
       exec-once = wallsetter
       exec-once = nm-applet --indicator
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
+      # Launch applications to specific workspaces on login
+      exec-once=[workspace 1 silent] kitty
+      exec-once=[workspace 4 silent] brave
+      exec-once=[workspace 5 silent] obsidian
+      exec-once=[workspace 6 silent] code
+      exec-once=[workspace 7 silent] brave --app=https://youtube.com 
+      exec-once=[workspace 8 silent] spotify
+      exec-once=[workspace 10 silent] virt-manager
       dwindle {
         pseudotile = true
         preserve_split = true
