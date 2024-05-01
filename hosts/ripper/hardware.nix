@@ -24,6 +24,8 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  boot.zfs.extraPools = [ "tank" "flash" ];
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
