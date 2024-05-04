@@ -23,10 +23,10 @@ in with lib; {
     in concatStrings [ ''
      # monitor=,preferred,auto,1
       ${extraMonitorSettings}
-      monitor=DP-3,1920x1080,0x0,1,transform,1
-      monitor=DP-2,3840x2160,1080x306,1.666667
-      monitor=DP-4,1920x1080,3382x0,1
-      monitor=DP-1,1920x1080,3382x1080,1
+      monitor=DP-3,2560x1440,970x0,1
+      monitor=DP-2,1920x1080,3382x1440,1,transform,3
+      monitor=DP-4,3840x2160,1080x1440,1.666667
+      monitor=DP-1,1920x1080,0x1440,1,transform,1
       workspace=1,monitor:DP-3,persistent:true,default:true
       workspace=2,monitor:DP-3,persistent:true
       workspace=3,monitor:DP-3,persistent:true
