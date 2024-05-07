@@ -10,11 +10,9 @@ theKBDLayout theSecondKBDLayout; in
       layout = "${theKBDLayout}, ${theSecondKBDLayout}";
     };
     libinput.enable = true;
-    displayManager.sddm = {
+    displayManager.gdm = {
       enable = true;
-      autoNumlock = true;
-      wayland.enable = true;
-      theme = "tokyo-night-sddm";
+      wayland = true;
     };
   };
 
