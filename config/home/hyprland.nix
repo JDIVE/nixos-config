@@ -27,18 +27,18 @@ in with lib; {
       monitor=DP-2,1920x1080,3382x1440,1,transform,3
       monitor=DP-4,3840x2160,1080x1440,1.666667
       monitor=DP-1,1920x1080,0x1440,1,transform,1
-      workspace=1,monitor:DP-3,persistent:true,default:true
-      workspace=2,monitor:DP-3,persistent:true
-      workspace=3,monitor:DP-3,persistent:true
-      workspace=4,monitor:DP-2,persistent:true,default:true
-      workspace=5,monitor:DP-2,persistent:true
-      workspace=6,monitor:DP-2,persistent:true
-      workspace=7,monitor:DP-4,persistent:true,default:true
-      workspace=8,monitor:DP-4,persistent:true
-      workspace=9,monitor:DP-4,persistent:true
-      workspace=10,monitor:DP-1,persistent:true,default:true
-      workspace=11,monitor:DP-1,persistent:true
-      workspace=12,monitor:DP-1,persistent:true
+      workspace=1,monitor:DP-1,persistent:true,default:true
+      workspace=2,monitor:DP-1,persistent:true
+      workspace=3,monitor:DP-1,persistent:true
+      workspace=4,monitor:DP-4,persistent:true,default:true
+      workspace=5,monitor:DP-4,persistent:true
+      workspace=6,monitor:DP-4,persistent:true
+      workspace=7,monitor:DP-2,persistent:true,default:true
+      workspace=8,monitor:DP-2,persistent:true
+      workspace=9,monitor:DP-2,persistent:true
+      workspace=10,monitor:DP-3,persistent:true,default:true
+      workspace=11,monitor:DP-3,persistent:true
+      workspace=12,monitor:DP-3,persistent:true
       general {
         gaps_in = 6
         gaps_out = 8
@@ -135,11 +135,11 @@ in with lib; {
       # Launch applications to specific workspaces on login
       exec-once=[workspace 1 silent] kitty
       exec-once=[workspace 4 silent] brave
-      exec-once=[workspace 5 silent] obsidian
+      exec-once=[workspace 7 silent] obsidian
       exec-once=[workspace 6 silent] code
-      exec-once=[workspace 7 silent] brave --app=https://youtube.com 
-      exec-once=[workspace 8 silent] spotify
-      exec-once=[workspace 10 silent] virt-manager
+      exec-once=[workspace 10 silent] brave --app=https://youtube.com 
+      exec-once=[workspace 11 silent] spotify
+      exec-once=[workspace 12 silent] virt-manager
       dwindle {
         pseudotile = true
         preserve_split = true
